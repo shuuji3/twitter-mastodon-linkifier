@@ -1,13 +1,4 @@
-const defaultConfig = {
-  memeMode: false,
-  textEnabled: true,
-  removeBlueVerification: false,
-  textOptions: {
-    verifiedLabel: "Verified",
-    twitterBlueLabel: "Paid",
-    enableBorder: true,
-  },
-};
+const defaultConfig = {};
 
 function createSettingsDomNode(items) {
   const settingsDomNode = document.createElement("div");
