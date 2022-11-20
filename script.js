@@ -378,7 +378,39 @@ function performBlueCheckFindAndReplace(node) {
   }
 }
 
+
+function linkifyUsername() {
+  const selectors = [
+    'main .css-1dbjc4n.r-6gpygo.r-14gqq1x > .css-1dbjc4n.r-1wbh5a2.r-dnmrzs.r-1ny4l3l > .css-1dbjc4n.r-1wbh5a2.r-dnmrzs.r-1ny4l3l span',
+    'span.css-901oao.css-16my406.css-1hf3ou5.r-poiln3.r-bcqeeo.r-qvutc0',
+  ]
+  selectors.forEach(selector => {
+    [...document.querySelectorAll(selector)].forEach(dom => linkifyDOM(dom))
+  })
+}
+
+function linkifyDOM(dom) {
+  const [isValid, mastodonUsername, mastodonDomain] = /@?(\w+)@([\w.]+)/.exec(dom.textContent) || [false, null, null]
+
+  if (isValid) {
+    const url = `https://${mastodonDomain}/@${mastodonUsername}`
+    const link = document.querySelector('a')
+    link.href = url
+    link.target = '_blank'
+    link.textContent = `🐘 ${dom.textContent}`
+    link.style = 'color: rgb(29, 155, 240); font-weight: 800; font-size: inherit;'
+    link.addEventListener('click', e => {
+      e.preventDefault()
+      window.open(url, '_blank').focus()
+    })
+    dom.display = 'none'
+    dom.replaceWith(link)
+  }
+}
+
 async function main() {
+  setTimeout(linkifyUsername, 5000)
+
   const observer = new MutationObserver(function (mutations, observer) {
     try {
       for (const mutation of mutations) {
@@ -406,8 +438,7 @@ async function main() {
 
       evaluateBlueCheck()
       evaluateBlueCheckProvidesDetails()
-    }
-    catch (error) {
+    } catch (error) {
       console.log('uncaught mutation error', error)
     }
   });
