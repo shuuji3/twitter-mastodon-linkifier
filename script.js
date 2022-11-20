@@ -418,7 +418,7 @@ async function main() {
           performBlueCheckFindAndReplace(mutation.target)
         }
         for (const node of mutation.addedNodes) {
-          if (node.nodeType === 1) {
+          if (node.nodeType === Node.ELEMENT_NODE) {
             performBlueCheckFindAndReplace(node)
           }
         }
