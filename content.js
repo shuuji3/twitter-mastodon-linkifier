@@ -11,14 +11,14 @@ const defaultConfig = {
 
 function createSettingsDomNode(items) {
   const settingsDomNode = document.createElement("div");
-  settingsDomNode.id = "eight-dollars-settings";
+  settingsDomNode.id = "twitter-mastodon-linkifier-settings";
   settingsDomNode.style.display = "none";
   settingsDomNode.innerText = JSON.stringify(items);
   document.body.appendChild(settingsDomNode);
 }
 
 function injectScript() {
-  const s = document.createElement("script", { id: "eight-dollars" });
+  const s = document.createElement("script", { id: "twitter-mastodon-linkifier" });
   s.src = chrome.runtime.getURL("script.js");
   s.onload = function () {
     this.remove();

@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Eight Dollars",
+    "name": "Twitter Mastodon Linkifier",
     "version": "1.3",
-    "description": "Eight Dollars can help you tell the difference between actual verified accounts and twitter blue users.",
+    "description": "Twitter Mastodon Linkifier can help you tell the difference between actual verified accounts and twitter blue users.",
     "icons": {
         "16": "./assets/16.png",
         "32": "./assets/32.png",
@@ -37,7 +37,7 @@
             "16": "./assets/16.png",
             "32": "./assets/32.png"
         },
-        "default_title": "Eight Dollars - Options",
+        "default_title": "Twitter Mastodon Linkifier - Options",
         "default_popup": "options/options.html"
     },
     "permissions": [

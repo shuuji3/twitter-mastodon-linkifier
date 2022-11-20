@@ -1,4 +1,4 @@
-const config = document.getElementById("eight-dollars-settings");
+const config = document.getElementById("twitter-mastodon-linkifier-settings");
 const data = JSON.parse(config.innerText);
 
 const MEME_MODE = data.memeMode;
