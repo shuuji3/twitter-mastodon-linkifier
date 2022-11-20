@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Twitter Mastodon Linkifier",
     "version": "1.0.0",
-    "description": "Twitter Mastodon Linkifier makes Mastodon usernames (like `@username@mastodon.social`, `other-mastodon-server.social/@username`, etc.) into clickable links on twitter.com so that you can easily visit each Mastodon server without typing the name.",
+    "description": "Twitter Mastodon Linkifier makes Mastodon usernames (like `@username@mastodon.social`) into clickable links on twitter.com.",
     "icons": {
         "16": "./assets/16.png",
         "32": "./assets/32.png",
