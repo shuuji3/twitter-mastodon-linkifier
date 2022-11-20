@@ -3,7 +3,7 @@ name: Bug report
 about: Create a report to help us improve
 title: "[BUG]"
 labels: bug
-assignees: noway, wseagar
+assignees: shuuji3
 
 ---
 
@@ -19,7 +19,6 @@ Extensions automatically update but may require a browser restart. Make sure tha
  - Extension Version [e.g. 1.3]
  - Location [e.g. US] (Twitter can roll out features in different regions at different times so this info is important to us)
  - Twitter Language (Include if using a non-English language)
-
 
 **What happened**
 Steps to reproduce the behavior:
