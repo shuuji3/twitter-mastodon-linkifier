@@ -2,8 +2,7 @@
 
 Twitter Mastodon Linkifier makes Mastodon usernames (like `@username@mastodon.social`, `other-mastodon-server.social/@username`, etc.) into clickable links on [twitter.com](https://twitter.com) so that you can easily visit each Mastodon server without typing the name.
 
-![Example of a search result with the extension](./assets/example-1.png)
-![Example of a profile page with the extension](./assets/example-2.png)
+<img width="400" alt="Example of a search result with the extension" src="./assets/example-1.png"> <img width="400" alt="Example of a profile page with the extension" src="./assets/example-2.png">
 
 ## Acknowledgement
 
@@ -11,16 +10,26 @@ The extension icon image was created from the elephant emoji of Google Noto Font
 
 ## How to install extension
 
-You can install the extension manually until the extension is published to the browser extension page.
+### Google Chrome
 
-Toggle the "developer mode" button on the extentions page.
+[Twitter Mastodon Linkifier - Chrome Web Store](https://chrome.google.com/webstore/detail/twitter-mastodon-linkifie/cmbdalihhbnchjenkhnckmokhginmpfd)
+
+### Mozilla Firefox
+
+[Twitter Mastodon Linkifier – Get this Extension for 🦊 Firefox](https://addons.mozilla.org/firefox/addon/twitter-mastodon-linkifier/)
+
+### Manual installation
+
+You can also install the extension manually.
+
+1. Toggle the "developer mode" button on the extentions page.
 ![instruction-1](assets/intro-1.png)
 
-Click "Load unpacked" button.
+2. Click "Load unpacked" button.
 ![instruction-2](assets/intro-2.png)
 
-Select the downloaded directory.
+3. Select the downloaded directory.
 ![instruction-3](assets/intro-3.png)
 
-Enable the loaded extension.
+4. Enable the loaded extension.
 ![instruction-4](assets/intro-4.png)
