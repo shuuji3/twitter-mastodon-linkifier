@@ -1,4 +1,6 @@
-const defaultConfig = {};
+const defaultConfig = {
+  linkTextColor: 'rgb(99, 100, 255)',
+};
 
 function createSettingsDomNode(items) {
   const settingsDomNode = document.createElement("div");
