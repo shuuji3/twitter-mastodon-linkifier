@@ -79,19 +79,23 @@ function getConfig(key) {
 function linkifyDOM(dom) {
   const [mastodonDomain, mastodonUsername] = findMastodonHostAndUsername(dom)
   if (mastodonUsername && mastodonDomain) {
-    const container = document.createElement('span')
-    container.className = 'twitter-mastodon-linkifier-username'
+    const elephantImage = document.createElement('span')
+    elephantImage.innerHTML = ELEPHANT_EMOJI_SVG
+    const svg = elephantImage.firstElementChild;
+    svg.alt = 'Elephant emoji'
+    svg.style.width = '1.5em'
+    svg.style.height = '1.5em'
+    svg.style.verticalAlign = 'sub'
 
     const link = document.createElement('a')
     link.href = `https://${mastodonDomain}/@${mastodonUsername}`
     link.target = '_blank'
-    link.textContent = `🐘 ${dom.textContent}`
+    link.innerHTML = `${elephantImage.innerHTML} ${dom.innerHTML}`
     link.style.color = getConfig('linkTextColor')
     link.style.fontWeight = 800
     link.style.fontSize = 'inherit'
     link.style.textDecoration = 'none'
 
-    container.appendChild(link)
     dom.replaceWith(link)
   }
 }
