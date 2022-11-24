@@ -92,10 +92,6 @@ function linkifyDOM(dom) {
     link.style.fontWeight = 800
     link.style.fontSize = 'inherit'
     link.style.textDecoration = 'none'
-    link.addEventListener('click', e => {
-      e.preventDefault()
-      window.open(url, '_blank').focus()
-    })
 
     span.appendChild(link)
     dom.replaceWith(link)
