@@ -1,5 +1,5 @@
 input {
-  caret-color: #fff;
+  caret-color: white;
 }
 
 body {
@@ -8,6 +8,7 @@ body {
   margin: 0;
   border: 1px solid #2f3336;
   background-color: #333;
+  color: white;
 }
 
 .save-container {
@@ -33,13 +34,11 @@ body {
 }
 
 .header h1 {
-  color: white;
   text-align: left;
   margin: 0;
 }
 
 p {
-  color: white;
   font-size: 1.2rem;
 }
 
@@ -74,7 +73,6 @@ p {
   margin-bottom: 1rem;
   border: 1px solid white;
   border-radius: 16px;
-  color: white;
   text-align: center;
   letter-spacing: 1px;
   display: none;
@@ -93,12 +91,6 @@ button {
 #color-preview {
   width: 50px;
   height: 50px;
-}
-
-label {
-  margin-bottom: 3px;
-  color: white;
-  padding-bottom: 0.25rem;
 }
 
 input::placeholder {
@@ -122,14 +114,6 @@ input[type="checkbox"] {
 
 input[type="text"]:focus {
   border-color: #1da1f2;
-}
-
-.text-option {
-  flex: 1;
-}
-
-.text-option label {
-  font-size: 0.8rem;
 }
 
 .inputs {
@@ -163,13 +147,13 @@ input[type="text"]:focus {
 }
 
 button {
-  color: white;
   background: #1da1f2;
   height: 40px;
   border-radius: 20px;
   cursor: pointer;
   font-weight: 900;
   font-size: 1rem;
+  color: white
 }
 
 button:hover {
