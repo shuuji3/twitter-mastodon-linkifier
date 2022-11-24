@@ -79,13 +79,11 @@ function getConfig(key) {
 function linkifyDOM(dom) {
   const [mastodonDomain, mastodonUsername] = findMastodonHostAndUsername(dom)
   if (mastodonUsername && mastodonDomain) {
-    const url = `https://${mastodonDomain}/@${mastodonUsername}`
-
     const span = document.createElement('span')
     span.className = 'twitter-mastodon-linkifier-username'
 
     const link = document.createElement('a')
-    link.href = url
+    link.href = `https://${mastodonDomain}/@${mastodonUsername}`
     link.target = '_blank'
     link.textContent = `🐘 ${dom.textContent}`
     link.style.color = getConfig('linkTextColor')
