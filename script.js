@@ -1,6 +1,3 @@
-const config = document.getElementById("twitter-mastodon-linkifier-settings");
-const data = JSON.parse(config.innerText);
-
 const USERNAME_PATTERNS = [
   `[data-testid="UserCell"] a[role="link"] > div > div[dir="auto"] > span`, // user panel
   `[data-testid="UserName"] div[dir="auto"] > span`, // username of profile
@@ -73,6 +70,12 @@ function performUsernameFindAndReplace(node) {
   }
 }
 
+function getConfig(key) {
+  const config = document.getElementById("twitter-mastodon-linkifier-settings");
+  const data = JSON.parse(config.innerText);
+  return data[key];
+}
+
 function linkifyDOM(dom) {
   const [mastodonDomain, mastodonUsername] = findMastodonHostAndUsername(dom)
   if (mastodonUsername && mastodonDomain) {
@@ -85,7 +88,7 @@ function linkifyDOM(dom) {
     link.href = url
     link.target = '_blank'
     link.textContent = `🐘 ${dom.textContent}`
-    link.style.color = '#3a3bff'
+    link.style.color = getConfig('linkTextColor')
     link.style.fontWeight = 800
     link.style.fontSize = 'inherit'
     link.style.textDecoration = 'none'
