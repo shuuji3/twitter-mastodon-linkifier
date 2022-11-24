@@ -79,8 +79,8 @@ function getConfig(key) {
 function linkifyDOM(dom) {
   const [mastodonDomain, mastodonUsername] = findMastodonHostAndUsername(dom)
   if (mastodonUsername && mastodonDomain) {
-    const span = document.createElement('span')
-    span.className = 'twitter-mastodon-linkifier-username'
+    const container = document.createElement('span')
+    container.className = 'twitter-mastodon-linkifier-username'
 
     const link = document.createElement('a')
     link.href = `https://${mastodonDomain}/@${mastodonUsername}`
@@ -91,7 +91,7 @@ function linkifyDOM(dom) {
     link.style.fontSize = 'inherit'
     link.style.textDecoration = 'none'
 
-    span.appendChild(link)
+    container.appendChild(link)
     dom.replaceWith(link)
   }
 }
