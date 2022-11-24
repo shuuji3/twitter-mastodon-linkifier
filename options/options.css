@@ -168,3 +168,28 @@ button:hover {
   padding: 0.5rem 1rem;
   box-sizing: border-box;
 }
+
+.text-option {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.text-option > span {
+  margin-bottom: 10px;
+}
+
+#color-pallet > .option > span {
+  margin-top: 10px;
+}
+
+#color-pallet > .option {
+  align-items: center
+}
+
+#color-pallet > .option > .color-pallet-color {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}

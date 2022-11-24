@@ -32,8 +32,16 @@ function updateColorPreview() {
   colorPreview.style.backgroundColor = color;
 }
 
+function setLinkTextColor(color) {
+  document.getElementById("link-text-color").value = color
+  updateColorPreview()
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   restoreOptions();
   document.getElementById("link-text-color").addEventListener("input", updateColorPreview);
   document.getElementById("save").addEventListener("click", saveOptions);
+  [...document.getElementsByClassName('color-pallet-color')].forEach(el => {
+    el.addEventListener('click', event => setLinkTextColor(event.target.style.backgroundColor))
+  })
 });
