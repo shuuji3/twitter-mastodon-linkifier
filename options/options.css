@@ -3,27 +3,23 @@ input {
 }
 
 body {
-
-
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   padding: 0;
   margin: 0;
   border: 1px solid #2f3336;
-  background-color: black;
-  ;
-
+  background-color: #333;
 }
 
-.savecontainer {
+.save-container {
   box-sizing: border-box;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 1rem;
   border-top: 1px solid #2f3336;
 }
 
 .header {
   display: grid;
   box-sizing: border-box;
-  grid-template-columns: 1fr 80px;
+  grid-template-columns: 1fr;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -31,29 +27,20 @@ body {
   padding: 1rem;
 }
 
-.header button {
-  margin: 0;
-  border: 1px solid #fff;
-  background: none;
-}
-
-.header button:hover {
-  margin: 0;
-  background: #fff;
-  color: black;
+.header img {
+  width: 200px;
+  justify-self: center;
 }
 
 .header h1 {
   color: #fff;
   text-align: left;
   margin: 0;
-
 }
 
 p {
   color: #fff;
   font-size: 1.2rem;
-
 }
 
 .container {
@@ -67,8 +54,7 @@ p {
   position: relative;
   border-radius: 20px;
   box-sizing: border-box;
-  background: #000;
-  width: 40rem;
+  width: 32rem;
 }
 
 .brand-logo {
@@ -105,12 +91,16 @@ button {
   font-size: 0.8rem;
 }
 
+#color-preview {
+  width: 50px;
+  height: 50px;
+}
+
 label {
   margin-bottom: 3px;
   color: #fff;
   padding-bottom: 0.25rem;
 }
-
 
 input::placeholder {
   color: #888;
@@ -148,8 +138,6 @@ input[type="text"]:focus {
   text-align: left;
   width: 100%;
 }
-
-.option {}
 
 .options {
   width: 100%;
@@ -190,8 +178,6 @@ button {
 button:hover {
   box-shadow: none;
 }
-
-
 
 .inputs-split {
   display: flex;
