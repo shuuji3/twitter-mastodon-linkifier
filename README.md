@@ -1,5 +1,7 @@
 ﻿# ![elephant emoji](assets/32.png) Twitter Mastodon Linkifier
 
+⚠ This extension is no longer maintained.
+
 Twitter Mastodon Linkifier makes Mastodon usernames (like `@username@mastodon.social`, `other-mastodon-server.social/@username`, etc.) into clickable links on [twitter.com](https://twitter.com) so that you can easily visit each Mastodon server without typing the name.
 
 <img width="400" alt="Extension setting page with color pallet" src="./assets/screenshot-1.png"> <img width="400" alt="Example of a search result with the extension" src="./assets/screenshot-2.png"> <img width="400" alt="Example of a profile page with the extension" src="./assets/screenshot-3.png">
